@@ -9,7 +9,6 @@ RSpec.describe Distance do
 			:query=>{:unit=>"miles", :code=>"80238", :country=>"us", :compare=>["01609"]},
 			:results=>{:"01609"=>1727.12}
 		}
-
 		sample_distance = Distance.new(sample_json)
 
 		expect(sample_distance.original_code).to eq("80238")
