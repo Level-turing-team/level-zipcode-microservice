@@ -13,7 +13,6 @@
 # it.
 require 'rspec'
 require 'rack/test'
-require 'JSON'
 
 def json
   JSON.parse(last_response.body)
