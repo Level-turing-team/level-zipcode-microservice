@@ -4,9 +4,9 @@ require 'dotenv/load'
 require 'pry'
 require 'faraday'
 require 'json'
-require 'sinatra/reloader'
 require 'fast_jsonapi'
 require './models/distance'
+
 
 get "/distance/:code/:compare" do
   response = conn.get("/api/v1/distance") do |f|
