@@ -80,5 +80,12 @@ This repository serves as a microservice to digest the zipcodebase api endpoints
 GET /distance/:code/:compare
 ```
 
+### Get Radius
+* Returns all zipcodes within a given radius
+> Required Parameters: `:origina_code` `:valid_code`
+```
+GET /distance/:original_code/:valid_code
+```
+
 </details>
 
