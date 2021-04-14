@@ -7,16 +7,19 @@ require 'json'
 require 'fast_jsonapi'
 require './models/distance'
 
-
 get "/distance/:code/:compare" do
-  response = conn.get("/api/v1/distance") do |f|
-    f.params['code'] = params[:code]
-    f.params['compare'] = params[:compare]
+  if params[:code].nil? || params[:compare].nil?
+    halt 400, json("Bad request")
+  else
+    response = conn.get("/api/v1/distance") do |f|
+      f.params['code'] = params[:code]
+      f.params['compare'] = params[:compare]
+    end
+    parsed = parse(response)
+    @distance = Distance.new(parsed)
+    content_type :json
+    @distance.to_json
   end
-  parsed = parse(response)
-  @distance = Distance.new(parsed)
-  content_type :json
-  @distance.to_json
 end
 
 private
