@@ -1,5 +1,4 @@
 require "spec_helper"
-require './zipcode_base_api'
 
 RSpec.describe 'Radius API' do
 	include Rack::Test::Methods

@@ -1,11 +1,11 @@
 require "spec_helper"
-require './zipcode_base_api'
 
 RSpec.describe 'Distance API' do
 	include Rack::Test::Methods
 	def app
 		Sinatra::Application
 	end
+
 	it "returns me json that is a hash with 2 keys" do
 		get "/distance/80238/01609"
 		expect(json.class).to eq Hash

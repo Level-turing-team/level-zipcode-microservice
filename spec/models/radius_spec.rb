@@ -1,5 +1,4 @@
 require "spec_helper"
-require './zipcode_base_api'
 require './models/radius'
 
 RSpec.describe Radius do

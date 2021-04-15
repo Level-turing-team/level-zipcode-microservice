@@ -1,5 +1,12 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'bundler'
-require './zipcode_base_api'
+
 Bundler.require
+
+Dir.glob('./app/{controllers}/*.rb').each { |file| require file }
+
+# map('/') { run ZipcodeController }
+map('/distance') { run DistanceController }
+map('/radius') { run RadiusController }
+
 run Sinatra::Application
