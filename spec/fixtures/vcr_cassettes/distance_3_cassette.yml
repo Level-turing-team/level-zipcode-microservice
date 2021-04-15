@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.zipcodebase.com/api/v1/distance?apikey=c8cad1c0-9be6-11eb-98d8-ef78725a91f1&code=11111&compare=sdfg&country=us&unit=miles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 15 Apr 2021 19:47:37 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc406268c43d4beec9ec2ce01e2b4cc291618516056; expires=Sat, 15-May-21
+        19:47:36 GMT; path=/; domain=.zipcodebase.com; HttpOnly; SameSite=Lax; Secure
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4335'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      Access-Control-Expose-Headers:
+      - Content-Length,Content-Range
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '0978ac33550000b5c440018000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=ktHuyLdBc1t%2BZOGwhH9rcqR37bdUP8wp8BykXSGy%2FGPwU4W6CuYcdUHVB%2B5pS7At0cNEzsJz0reCOATfpr5cdkVzZv6D1jibum7JCof0hlGbWyun"}]}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6407afcbbd9cb5c4-MEM
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"query":{"unit":"miles","code":"11111","country":"us","compare":["sdfg"]},"results":[]}'
+  recorded_at: Thu, 15 Apr 2021 19:47:37 GMT
+recorded_with: VCR 6.0.0

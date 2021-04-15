@@ -14,6 +14,7 @@
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
+require 'vcr'
 
 def json
   JSON.parse(last_response.body)
@@ -104,4 +105,9 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
 end

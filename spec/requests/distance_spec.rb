@@ -7,25 +7,27 @@ RSpec.describe 'Distance API' do
 		Sinatra::Application
 	end
 	it "returns me json that is a hash with 2 keys" do
-    json_response = File.read("spec/fixtures/distance_1.json")
-    stub_request(:get, "/distance/80238/01609").
-    to_return(body: json_response)
-
-
-		get "/distance/80238/01609"
-		expect(json.class).to eq Hash
-		expect(json.keys.length).to eq 2
-		expect(json.keys).to eq ["original_code", "distance"]
+    VCR.use_cassette('distance_1_cassette') do
+      
+      get "/distance/80238/01609"
+      expect(json.class).to eq Hash
+      expect(json.keys.length).to eq 2
+      expect(json.keys).to eq ["original_code", "distance"]
+    end
 	end
-
+  
 	it 'returns an empty array if given incorrect starting zipcode' do
-		get "/distance/00000/"
-		expect(last_response.status).to eq(404)
-	end
-
-	it 'returns an empty array if given incorrect ending zipcode' do
-		get "/distance/11111/sdfg"
-    expect(last_response.status).to eq(200)
-    expect(json['distance']).to eq([])
-	end
+    VCR.use_cassette('distance_2_cassette') do
+      get "/distance/00000/"
+      expect(last_response.status).to eq(404)
+    end
+  end
+    
+  it 'returns an empty array if given incorrect ending zipcode' do
+    VCR.use_cassette('distance_3_cassette') do
+	    get "/distance/11111/sdfg"
+      expect(last_response.status).to eq(200)
+      expect(json['distance']).to eq([])
+    end
+  end
 end
