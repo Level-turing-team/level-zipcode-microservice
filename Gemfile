@@ -12,4 +12,6 @@ gem "pg"
 group :test do
 	gem "rack-test"
   gem "rspec"
+  gem "webmock"
+  gem "vcr"
 end
