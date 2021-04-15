@@ -17,10 +17,8 @@ RSpec.describe 'Distance API' do
 	end
   
 	it 'returns an empty array if given incorrect starting zipcode' do
-    VCR.use_cassette('distance_2_cassette') do
       get "/distance/00000/"
       expect(last_response.status).to eq(404)
-    end
   end
     
   it 'returns an empty array if given incorrect ending zipcode' do

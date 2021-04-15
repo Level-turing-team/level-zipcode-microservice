@@ -27,12 +27,10 @@ RSpec.describe 'Radius API' do
   end
     
   it 'returns a 404 if given radius over 500 miles' do
-      VCR.use_cassette('radius_3_cassette') do
-        get "/radius/80238/999"
+    get "/radius/80238/999"
 
-	    	expect(json["body"].keys.length).to eq 2
-	    	expect(json["body"]).to have_key("error")
-	    	expect(json["body"]["original_code"]).to be_nil
-      end
+	  expect(json["body"].keys.length).to eq 2
+	  expect(json["body"]).to have_key("error")
+	  expect(json["body"]["original_code"]).to be_nil
 	end
 end
