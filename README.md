@@ -56,7 +56,13 @@ This repository serves as a microservice to digest the zipcodebase api endpoints
 
 1. Clone this repo
 2. Install gem packages: `bundle install`
-3. Start sinatra server
+4. Local development needs an API key `https://app.zipcodebase.com/register?plan=free`
+5. Create `.env` under `/app` 
+```E.G
+ZIPCODEBASE_APIKEY = 'your token'
+
+```
+7. Start sinatra server
 ```
  $rackup
  "rackup will let you know which localhost port to navigate to"
