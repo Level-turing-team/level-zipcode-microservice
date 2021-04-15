@@ -7,6 +7,11 @@ RSpec.describe 'Distance API' do
 		Sinatra::Application
 	end
 	it "returns me json that is a hash with 2 keys" do
+    json_response = File.read("spec/fixtures/distance_1.json")
+    stub_request(:get, "/distance/80238/01609").
+    to_return(body: json_response)
+
+
 		get "/distance/80238/01609"
 		expect(json.class).to eq Hash
 		expect(json.keys.length).to eq 2

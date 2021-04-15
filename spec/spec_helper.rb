@@ -13,6 +13,7 @@
 # it.
 require 'rspec'
 require 'rack/test'
+require 'webmock/rspec'
 
 def json
   JSON.parse(last_response.body)
