@@ -74,7 +74,6 @@ ZIPCODEBASE_APIKEY = 'your token'
 
 <!-- USAGE EXAMPLES -->
 
-
 <details open>
 <summary>ReST Endpoints</summary>
 <br>

@@ -9,8 +9,7 @@ require 'fast_jsonapi'
 require './models/distance'
 require './models/radius'
 require './models/bad_request'
-# require './app/controllers/distance_controller'
-# require './app/controllers/radius_controller'
+require './app/controllers/distance_controller'
 
 class ZipcodeController < Sinatra::Base
   def conn
