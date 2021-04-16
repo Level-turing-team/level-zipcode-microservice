@@ -11,9 +11,9 @@ require './models/bad_request'
 
 get "/distance/:code/:compare" do
   if params[:code].nil? || params[:compare].nil?
-    @error = BadRequest.new
-    content_type :json
-    @error.to_json
+    # @error = BadRequest.new
+    # content_type :json
+    # @error.to_json
   else
     response = conn.get("/api/v1/distance") do |f|
       f.params['code'] = params[:code]

@@ -20,6 +20,11 @@ RSpec.describe 'Distance API' do
       get "/distance/00000/"
       expect(last_response.status).to eq(404)
   end
+
+	it 'returns bad request if no params given' do
+      get "/distance"
+      expect(last_response.status).to eq(404)
+  end
     
   it 'returns an empty array if given incorrect ending zipcode' do
     VCR.use_cassette('distance_3_cassette') do

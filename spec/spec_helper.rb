@@ -15,7 +15,9 @@ require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
 require 'vcr'
-
+require 'simplecov'
+SimpleCov.start 'rails'
+SimpleCov.add_filter "app/controllers"
 def json
   JSON.parse(last_response.body)
 end
