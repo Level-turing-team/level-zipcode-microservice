@@ -20,8 +20,8 @@ RSpec.describe 'Distance API' do
       expect(last_response.status).to eq(404)
   end
 
-	it 'returns bad request if no params given' do
-      get "/distance"
+	it 'returns bad request if no uri given' do
+      get "/"
       expect(last_response.status).to eq(404)
   end
     
