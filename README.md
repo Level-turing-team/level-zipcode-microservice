@@ -64,8 +64,8 @@ ZIPCODEBASE_APIKEY = 'your token'
 ```
 7. Start sinatra server
 ```
- $rackup
- "rackup will let you know which localhost port to navigate to"
+ $rackup or shotgun
+ "rackup or shotgun will let you know which localhost port to navigate to"
 ```
 ### Prerequisites
 
@@ -88,7 +88,7 @@ GET /distance/:code/:compare
 
 ### Get Radius
 * Returns all zipcodes within a given radius
-> Required Parameters: `:origina_code` `:valid_code`
+> Required Parameters: `:original_code` `:valid_code`
 ```
 GET /distance/:original_code/:valid_code
 ```

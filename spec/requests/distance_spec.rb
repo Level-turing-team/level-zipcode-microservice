@@ -1,10 +1,11 @@
 require "spec_helper"
 require './zipcode_base_api'
+require './app/controllers/distance_controller'
 
 RSpec.describe 'Distance API' do
 	include Rack::Test::Methods
 	def app
-		Sinatra::Application
+		DistanceController
 	end
 	it "returns me json that is a hash with 2 keys" do
     VCR.use_cassette('distance_1_cassette') do

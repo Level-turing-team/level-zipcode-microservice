@@ -8,6 +8,7 @@ gem "rack"
 gem "sinatra"
 gem "rake"
 gem "pg"
+gem "shotgun"
 
 group :test do
 	gem "rack-test"

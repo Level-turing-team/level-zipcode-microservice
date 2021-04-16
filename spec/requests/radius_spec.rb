@@ -1,11 +1,13 @@
 require "spec_helper"
 require './zipcode_base_api'
+require './app/controllers/radius_controller'
 
 RSpec.describe 'Radius API' do
 	include Rack::Test::Methods
 	def app
-		Sinatra::Application
+		RadiusController
 	end
+  
 	it "returns closest zip codes in a given radius" do
     VCR.use_cassette('radius_1_cassette') do
 		  get "/radius/80238/2"
@@ -16,7 +18,6 @@ RSpec.describe 'Radius API' do
 		  expect(json["valid_codes"].length).to eq 29
     end
 	end
-  
   
 	it 'returns a 404 if given incorrect starting zipcode' do
     VCR.use_cassette('radius_2_cassette') do
