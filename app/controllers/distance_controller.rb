@@ -8,7 +8,7 @@ class DistanceController < ZipcodeController
       f.params['code'] = params[:code]
       f.params['compare'] = params[:compare]
     end
-    
+
     parsed = parse(response)
     @distance = Distance.new(parsed)
     content_type :json

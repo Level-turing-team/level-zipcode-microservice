@@ -13,7 +13,7 @@ class RadiusController < ZipcodeController
         f.params['code'] = params[:code]
         f.params['radius'] = params[:radius]
       end
-  
+
       parsed = parse(response)
       @radius = Radius.new(parsed)
       content_type :json

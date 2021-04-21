@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.zipcodebase.com/api/v1/distance?apikey=c8cad1c0-9be6-11eb-98d8-ef78725a91f1&code=80238&compare=01609&country=us&unit=miles
+    uri: https://app.zipcodebase.com/api/v1/distance?apikey=890cf8e0-a226-11eb-b213-bd22138d4fcb&code=80238&compare=01609&country=us&unit=miles
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Apr 2021 19:47:36 GMT
+      - Wed, 21 Apr 2021 23:55:28 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -27,14 +27,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d0aaee9be83552a566410adfd33d2c67d1618516056; expires=Sat, 15-May-21
-        19:47:36 GMT; path=/; domain=.zipcodebase.com; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d82be6cbea9d469d231e87484b01de6301619049328; expires=Fri, 21-May-21
+        23:55:28 GMT; path=/; domain=.zipcodebase.com; HttpOnly; SameSite=Lax; Secure
       Charset:
       - utf-8
       Cache-Control:
       - no-cache, private
       X-Ratelimit-Remaining:
-      - '4335'
+      - '1809'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
@@ -46,21 +46,21 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - '0978ac30d50000e3b6293b2000000001'
+      - '09987546380000fed2b11c7000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Kctho2zxkkijxecbkTqzP0Os4YvZHUXHN8OFHDx2xkNU%2BfY7OwlZtvZ2R4o7MaP%2BmKd3wOqnGQrfxXPe9vdYQyi3fdcQDnR%2F5uXH9XSdEySKcmkN"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=tqDdjx17QSnG9reIpsMlnisPUnj%2FKnMAXZXSL9Elr3X12VJ35KJy9aE8negUiEzuD4cK7n6j5R1JTzY5tJA11Txht%2BEl5%2F83crw8BJFRNbD2rMCz3eMTxsnZMXrHeLcJ"}],"max_age":604800,"group":"cf-nel"}'
       Nel:
       - '{"max_age":604800,"report_to":"cf-nel"}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 6407afc7baa9e3b6-ATL
+      - 643a8b1d2ef9fed2-IAH
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"query":{"unit":"miles","code":"80238","country":"us","compare":["01609"]},"results":{"01609":1727.12}}'
-  recorded_at: Thu, 15 Apr 2021 19:47:36 GMT
+  recorded_at: Wed, 21 Apr 2021 23:55:28 GMT
 recorded_with: VCR 6.0.0

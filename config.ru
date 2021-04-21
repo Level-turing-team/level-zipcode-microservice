@@ -6,8 +6,7 @@ require './app/controllers/radius_controller'
 require './app/controllers/zipcode_controller'
 Bundler.require
 Dir.glob('./app/{controllers}/*.rb').each { |file| require file }
-map('/distance') { run DistanceController }
-map('/radius') { run RadiusController }
-# map('/') { run ZipcodeController }
+map('/api/v1/distance') { run DistanceController }
+map('/api/v1/radius') { run RadiusController }
 run Sinatra::Application
 
