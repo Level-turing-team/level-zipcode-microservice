@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.zipcodebase.com/api/v1/radius?apikey=c8cad1c0-9be6-11eb-98d8-ef78725a91f1&code=80238&country=us&radius=2&unit=miles
+    uri: https://app.zipcodebase.com/api/v1/radius?apikey=dont_look&code=80238&country=us&radius=2&unit=miles
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Apr 2021 19:49:15 GMT
+      - Thu, 22 Apr 2021 00:51:22 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -27,14 +27,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d0a1a8ecbbc4522b122f5a9707891ee9e1618516154; expires=Sat, 15-May-21
-        19:49:14 GMT; path=/; domain=.zipcodebase.com; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d0406ebfa7a08501e9491bc0f28a731a01619052681; expires=Sat, 22-May-21
+        00:51:21 GMT; path=/; domain=.zipcodebase.com; HttpOnly; SameSite=Lax; Secure
       Charset:
       - utf-8
       Cache-Control:
       - no-cache, private
       X-Ratelimit-Remaining:
-      - '4325'
+      - '1477'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
@@ -46,21 +46,21 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - '0978adb11700001273cc9c9000000001'
+      - '0998a871f70000feea02328000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=ddUMj2LVkDiFVX6KTRqYSBsSUkDz67DX%2FbFTm0NaAonb9zK5mx1gfVVotBa5mlgPaQbjQR7coxvt0dcJ%2FXP7xbsFY7WHb4FJ1wGszmAIA1ta0CUo"}],"max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=%2BuHr51fCRuqnW6b7uCAkO2jxkjtKRdSvomtd%2Bsj6srwSiAf%2F7Ui4JoMB9DpY2V1SZJuyRKsRGK6pb5s%2F4YCgPXx%2BIP0M1WkG7U%2FptUIJdYwoIspsRlR1ddrWv3NQ%2FyL3"}],"max_age":604800,"group":"cf-nel"}'
       Nel:
-      - '{"max_age":604800,"report_to":"cf-nel"}'
+      - '{"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 6407b22e8cfd1273-MIA
+      - 643adcfcba94feea-IAH
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"query":{"code":"80238","unit":"miles","radius":"2","country":"us"},"results":[{"code":"80208","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80217","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80238","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80243","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80244","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80248","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80250","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80251","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80252","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80257","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80263","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80265","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80271","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80299","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0},{"code":"80261","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.09},{"code":"80264","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.25},{"code":"80290","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.34},{"code":"80274","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.36},{"code":"80281","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.36},{"code":"80291","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.36},{"code":"80293","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.56},{"code":"80203","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.58},{"code":"80259","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.6},{"code":"80266","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.66},{"code":"80256","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.71},{"code":"80294","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.72},{"code":"80218","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.82},{"code":"80273","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.84},{"code":"80202","city":"Denver","state":"CO","city_en":null,"state_en":null,"distance":0.86}]}'
-  recorded_at: Thu, 15 Apr 2021 19:49:15 GMT
+  recorded_at: Thu, 22 Apr 2021 00:51:22 GMT
 recorded_with: VCR 6.0.0

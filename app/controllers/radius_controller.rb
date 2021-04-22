@@ -1,8 +1,8 @@
 require 'sinatra/base'
-require './app/controllers/distance_controller'
-require './app/controllers/zipcode_controller'
+require_relative 'application_controller'
 
-class RadiusController < ZipcodeController
+
+class RadiusController < ApplicationController
   get "/:code/:radius" do
     if params[:radius].to_i.zero? || params[:radius].to_i >= 500
       @error = BadRequest.new
@@ -13,7 +13,6 @@ class RadiusController < ZipcodeController
         f.params['code'] = params[:code]
         f.params['radius'] = params[:radius]
       end
-  
       parsed = parse(response)
       @radius = Radius.new(parsed)
       content_type :json
