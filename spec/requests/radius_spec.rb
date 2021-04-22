@@ -7,9 +7,9 @@ RSpec.describe 'Radius API' do
 	def app
 		RadiusController
 	end
-  
+
 	it "returns closest zip codes in a given radius" do
-    VCR.use_cassette('radius_1_cassette') do
+    VCR.use_cassette('radius_1_cassette', :record => :new_episodes) do
 		  get "/80238/2"
 		  expect(json.class).to eq Hash
 		  expect(json.keys.length).to eq 2
@@ -18,20 +18,22 @@ RSpec.describe 'Radius API' do
 		  expect(json["valid_codes"].length).to eq 29
     end
 	end
-  
+
 	it 'returns a 404 if given incorrect starting zipcode' do
-    VCR.use_cassette('radius_2_cassette') do
+    VCR.use_cassette('radius_2_cassette', :record => :new_episodes) do
       get "/1111/2"
-      
+
       expect(json["valid_codes"]).to have_key("error")
     end
   end
-    
-  it 'returns a 404 if given radius over 500 miles' do
-    get "/80238/999"
 
-	  expect(json["body"].keys.length).to eq 2
-	  expect(json["body"]).to have_key("error")
-	  expect(json["body"]["original_code"]).to be_nil
+  it 'returns a 404 if given radius over 500 miles' do
+  	VCR.use_cassette('sad_radius_1_cassette', :record => :new_episodes) do
+	    get "/80238/999"
+
+		  expect(json["body"].keys.length).to eq 2
+		  expect(json["body"]).to have_key("error")
+		  expect(json["body"]["original_code"]).to be_nil
+		end
 	end
 end
