@@ -1,6 +1,6 @@
 require "spec_helper"
 require './app/controllers/radius_controller'
-require './app/controllers/zipcode_controller'
+
 
 RSpec.describe 'Radius API' do
 	include Rack::Test::Methods

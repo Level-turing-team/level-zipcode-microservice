@@ -1,5 +1,5 @@
 require "spec_helper"
-
+require './app/controllers/distance_controller'
 RSpec.describe 'Distance API' do
 	include Rack::Test::Methods
 	def app

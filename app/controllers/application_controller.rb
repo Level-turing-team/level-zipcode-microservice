@@ -11,7 +11,7 @@ require './models/radius'
 require './models/bad_request'
 require './app/controllers/distance_controller'
 
-class ZipcodeController < Sinatra::Base
+class ApplicationController < Sinatra::Base
   def conn
     conn = Faraday.new('https://app.zipcodebase.com', params: {apikey: ENV['ZIPCODEBASE_APIKEY'], unit: 'miles', country: 'us'})
   end
